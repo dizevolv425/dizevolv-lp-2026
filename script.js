@@ -82,3 +82,6 @@ reveal('.logos-row', { y: 10 });
 
 // Problema section
 reveal('.problema h2', { y: 14 });
+
+// Autoridade / certificacoes
+reveal('.cert-badge', { stagger: true, y: 16 });
