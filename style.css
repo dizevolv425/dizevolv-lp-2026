@@ -37,15 +37,16 @@ h1 .g{background:linear-gradient(135deg, var(--orange) 0%, var(--orange2) 100%);
 .btn-s:hover{border-color:var(--g2);color:var(--white)}
 
 /* SEÇÃO CLIENTES / MARQUEE */
-.clientes-sec{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 0;overflow:hidden}
-.clientes-header{text-align:center;padding:0 6%;margin-bottom:48px}
-.clientes-sub{font-size:15px;color:var(--g2);font-weight:300;margin-top:6px;font-family:var(--fb)}
-.marquee-wrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.marquee-track{display:flex;gap:16px;width:max-content;animation:marquee 36s linear infinite}
+.clientes-sec{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 0;overflow:hidden}
+.clientes-count{text-align:center;font-size:17px;color:var(--g1);font-family:var(--fb);font-weight:300;padding:0 6%;margin-bottom:44px;line-height:1.5}
+.clientes-count strong{color:var(--white);font-weight:700}
+.marquee-wrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee-track{display:flex;align-items:flex-start;gap:12px;width:max-content;animation:marquee 42s linear infinite}
 .marquee-track:hover{animation-play-state:paused}
-.client-card{background:#ffffff;border-radius:14px;width:172px;height:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:16px 22px;transition:transform .3s,box-shadow .3s;box-shadow:0 2px 12px rgba(0,0,0,0.22)}
-.client-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.38)}
-.client-card img{max-width:100%;max-height:62px;width:auto;object-fit:contain;mix-blend-mode:multiply;filter:none;opacity:1;display:block}
+.client-item{display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0}
+.client-card{width:144px;height:200px;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform .3s,box-shadow .3s;flex-shrink:0}
+.client-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,0.55)}
+.client-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* SECTIONS */
