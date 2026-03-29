@@ -8,18 +8,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=6">
 <style>
-/* OVERRIDE INLINE: seção clientes — portrait cards estilo AWsales */
-.clientes-sec{background:#000;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:64px 0;overflow:visible;width:100%}
-.clientes-count{text-align:center;font-size:17px;color:#c9c9c9;font-family:'DM Sans',sans-serif;font-weight:300;padding:0 6%;margin-bottom:44px;line-height:1.5}
+/* SEÇÃO CLIENTES — SCROLL HORIZONTAL ESTILO AWSALES */
+.clientes-sec{background:#000;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:64px 0}
+.clientes-count{text-align:center;font-size:17px;color:#c9c9c9;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:44px;padding:0 40px;line-height:1.5}
 .clientes-count strong{color:#fff;font-weight:700}
-.marquee-wrap{overflow:hidden}
-.marquee-track{display:flex!important;align-items:center!important;gap:16px!important;width:max-content!important;animation:marquee 42s linear infinite!important;padding:8px 0}
-.marquee-track:hover{animation-play-state:paused!important}
-.client-item{display:flex!important;flex-direction:column!important;align-items:center!important;flex-shrink:0!important}
-.client-card{width:148px!important;height:204px!important;border-radius:16px!important;border:3px solid #fff!important;box-shadow:0 4px 20px rgba(0,0,0,0.4)!important;transition:transform .3s,box-shadow .3s!important;flex-shrink:0!important;padding:18px!important;box-sizing:border-box!important;background:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
-.client-card:hover{transform:translateY(-6px)!important;box-shadow:0 18px 44px rgba(0,0,0,0.55)!important}
-.client-card img{width:100%!important;height:100%!important;max-width:unset!important;max-height:unset!important;object-fit:contain!important;display:block!important;filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.clientes-row{display:flex;flex-direction:row;gap:16px;overflow-x:auto;overflow-y:visible;padding:0 40px 20px 40px;scrollbar-width:none;-ms-overflow-style:none}
+.clientes-row::-webkit-scrollbar{display:none}
+.client-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex-shrink:0}
+.client-card{width:200px;height:280px;border-radius:16px;overflow:hidden;flex-shrink:0;transition:transform .25s,box-shadow .25s}
+.client-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.55)}
+.client-card img{width:100%;height:100%;object-fit:cover;display:block}
+.client-card.white-bg{background:#fff}
+.client-card.white-bg img{object-fit:contain;padding:20px;box-sizing:border-box}
+.client-name{font-size:14px;color:rgba(255,255,255,0.8);text-align:left;font-weight:500;font-family:'DM Sans',sans-serif;width:200px}
 </style>
 </head>
 <body>
@@ -199,42 +200,23 @@
 <!-- SEÇÃO 02: QUEM CONFIA NA DIZEVOLV -->
 <section class="clientes-sec">
   <p class="clientes-count"><strong>+40 empresas</strong>. As que já escolheram a IA que executa.</p>
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <div class="client-item"><div class="client-card"><img src="clientes/1.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/2.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/3.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/4.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/5.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/6.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/7.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/8.avif" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/9.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/10.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/11.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/12.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/13.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/14.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/15.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/16.jpg" alt="Cliente"></div></div>
-      <!-- duplicado para loop infinito -->
-      <div class="client-item"><div class="client-card"><img src="clientes/1.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/2.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/3.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/4.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/5.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/6.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/7.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/8.avif" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/9.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/10.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/11.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/12.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/13.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/14.jpg" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/15.png" alt="Cliente"></div></div>
-      <div class="client-item"><div class="client-card"><img src="clientes/16.jpg" alt="Cliente"></div></div>
-    </div>
+  <div class="clientes-row">
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/1.jpg" alt="Cliente"></div><span class="client-name">Cliente</span></div>
+    <div class="client-item"><div class="client-card" style="background:#e8650a"><img src="clientes/2.png" alt="Grupo 2S"></div><span class="client-name">Grupo 2S</span></div>
+    <div class="client-item"><div class="client-card" style="background:#2d4a1e"><img src="clientes/3.png" alt="Cliente"></div><span class="client-name">Cliente</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/4.jpg" alt="Conecta Obras"></div><span class="client-name">Conecta Obras</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/5.jpg" alt="Finder Pro"></div><span class="client-name">Finder Pro</span></div>
+    <div class="client-item"><div class="client-card" style="background:#0d0d0d"><img src="clientes/6.png" alt="SVis"></div><span class="client-name">SVis</span></div>
+    <div class="client-item"><div class="client-card" style="background:#5c3d8f"><img src="clientes/7.png" alt="Movioca"></div><span class="client-name">Movioca</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/8.avif" alt="Superus Engenharia"></div><span class="client-name">Superus Engenharia</span></div>
+    <div class="client-item"><div class="client-card" style="background:#1a3d25"><img src="clientes/9.png" alt="Natur &amp; Vida"></div><span class="client-name">Natur &amp; Vida</span></div>
+    <div class="client-item"><div class="client-card" style="background:#0d0d0d"><img src="clientes/10.png" alt="Máquina de Vendas"></div><span class="client-name">Máquina de Vendas</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/11.jpg" alt="Rios Vistorias"></div><span class="client-name">Rios Vistorias</span></div>
+    <div class="client-item"><div class="client-card" style="background:#1a5fbd"><img src="clientes/12.png" alt="Grupo Clasp"></div><span class="client-name">Grupo Clasp</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/13.png" alt="ARTTI Capital"></div><span class="client-name">ARTTI Capital</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/14.jpg" alt="ProAtiva"></div><span class="client-name">ProAtiva</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/15.png" alt="Cliente"></div><span class="client-name">Cliente</span></div>
+    <div class="client-item"><div class="client-card white-bg"><img src="clientes/16.jpg" alt="Cliente"></div><span class="client-name">Cliente</span></div>
   </div>
 </section>
 

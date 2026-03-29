@@ -86,19 +86,3 @@ reveal('.problema h2', { y: 14 });
 // Autoridade / certificacoes
 reveal('.cert-badge', { stagger: true, y: 16 });
 
-// Client logos: cover para quadradas/portrait, contain+bg branco para landscape
-document.querySelectorAll('.client-card img').forEach(img => {
-  function applyFit() {
-    const r = img.naturalWidth / img.naturalHeight;
-    if (r > 1.25) {
-      img.style.objectFit = 'contain';
-      img.style.padding = '16px';
-      img.parentElement.style.backgroundColor = '#fff';
-    } else {
-      img.style.objectFit = 'cover';
-      img.style.padding = '0';
-    }
-  }
-  if (img.complete && img.naturalWidth) applyFit();
-  else img.addEventListener('load', applyFit);
-});
