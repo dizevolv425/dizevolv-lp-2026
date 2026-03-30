@@ -21,9 +21,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-cta:hover{background:var(--orange2);box-shadow:var(--shadow-btn-hover)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 6% 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse at center,rgba(255,49,0,0.07) 0%,transparent 65%);pointer-events:none}
-.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 6% 80px;position:relative;overflow:hidden;background:#0a0a0a}
+
+/* ORB */
+.hero-orb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(860px,92vw);height:min(860px,92vw);border-radius:50%;background:radial-gradient(circle at center,rgba(255,80,0,0.26) 0%,rgba(200,40,0,0.16) 22%,rgba(120,20,0,0.09) 42%,rgba(40,5,0,0.03) 62%,transparent 75%);pointer-events:none;z-index:0}
+.hero-orb::before{content:'';position:absolute;inset:7%;border-radius:50%;border:1px solid rgba(255,80,0,0.13);box-shadow:0 0 80px rgba(255,80,0,0.12),inset 0 0 60px rgba(255,80,0,0.06)}
+.hero-orb::after{content:'';position:absolute;inset:22%;border-radius:50%;border:1px solid rgba(255,80,0,0.07)}
+
+/* FLOATING PILLS */
+.hero-pill{position:absolute;z-index:2;background:rgba(16,12,10,0.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.13);border-radius:99px;padding:10px 20px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.82);white-space:nowrap;font-family:var(--fb);display:flex;align-items:center;gap:8px}
+.hp-dot{width:6px;height:6px;border-radius:50%;background:#e8511a;flex-shrink:0;box-shadow:0 0 7px rgba(232,81,26,0.7)}
+.hp-1{top:22%;left:9%;animation:float-a 5.2s ease-in-out infinite}
+.hp-2{top:20%;right:10%;animation:float-b 6s ease-in-out infinite .4s}
+.hp-3{bottom:27%;left:6%;animation:float-a 5.8s ease-in-out infinite .9s}
+.hp-4{bottom:25%;right:9%;animation:float-b 4.8s ease-in-out infinite 1.3s}
+@keyframes float-a{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes float-b{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* HERO CONTENT */
+.hero-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+
+/* CTA PILL */
+.btn-pill-cta{border-radius:99px !important;padding:14px 38px !important;font-size:15px !important;box-shadow:0 0 28px rgba(232,81,26,0.38),0 4px 20px rgba(0,0,0,0.45) !important}
+.btn-pill-cta:hover{box-shadow:0 0 44px rgba(232,81,26,0.55),0 6px 28px rgba(0,0,0,0.55) !important;transform:translateY(-2px)}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,49,0,0.08);border:1px solid rgba(255,49,0,0.2);border-radius:99px;padding:5px 14px;font-size:12px;color:var(--orange);font-weight:500;margin-bottom:28px;letter-spacing:0.04em;text-transform:uppercase;position:relative;z-index:1}
 .bdot{width:5px;height:5px;background:var(--orange);border-radius:50%;box-shadow:0 0 6px var(--orange)}
 h1{font-family:var(--fd);font-size:clamp(38px,5.5vw,76px);font-weight:800;line-height:1.02;letter-spacing:-3px;color:var(--white);max-width:1000px;position:relative;z-index:1}
@@ -345,6 +365,10 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .badge{animation:fadeUp .5s ease both}
-h1{animation:fadeUp .5s .08s ease both}
-.hero-sub{animation:fadeUp .5s .16s ease both}
-.btns{animation:fadeUp .5s .24s ease both}
+.hero-content h1{animation:fadeUp .6s .1s ease both}
+.hero-content .hero-sub{animation:fadeUp .6s .2s ease both}
+.hero-content .btns{animation:fadeUp .6s .3s ease both}
+.hp-1{animation:float-a 5.2s ease-in-out infinite,fadeUp .8s .05s ease both}
+.hp-2{animation:float-b 6s ease-in-out infinite .4s,fadeUp .8s .15s ease both}
+.hp-3{animation:float-a 5.8s ease-in-out infinite .9s,fadeUp .8s .25s ease both}
+.hp-4{animation:float-b 4.8s ease-in-out infinite 1.3s,fadeUp .8s .35s ease both}
