@@ -86,3 +86,17 @@ reveal('.problema h2', { y: 14 });
 // Autoridade / certificacoes
 reveal('.cert-badge', { stagger: true, y: 16 });
 
+// Agent sector tabs
+const agentTabs = document.querySelectorAll('.agent-tab');
+const agentPanels = document.querySelectorAll('.agent-panel');
+const agentIcon = document.querySelector('.agent-icon');
+agentTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    agentTabs.forEach(t => t.classList.remove('active'));
+    agentPanels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector(tab.dataset.panel).classList.add('active');
+    if (agentIcon) agentIcon.textContent = tab.dataset.icon;
+  });
+});
+

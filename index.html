@@ -6,21 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dizevolv Tech Parceiro de Operação com IA</title>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=12">
 <style>
-/* SEÇÃO CLIENTES — SCROLL HORIZONTAL ESTILO AWSALES */
-.clientes-sec{background:#000;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:64px 0}
-.clientes-count{text-align:center;font-size:17px;color:#c9c9c9;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:44px;padding:0 40px;line-height:1.5}
-.clientes-count strong{color:#fff;font-weight:700}
-.clientes-row{display:flex;flex-direction:row;gap:16px;overflow-x:auto;overflow-y:visible;padding:0 40px 20px 40px;scrollbar-width:none;-ms-overflow-style:none}
-.clientes-row::-webkit-scrollbar{display:none}
-.client-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex-shrink:0}
-.client-card{width:200px;height:280px;border-radius:16px;overflow:hidden;flex-shrink:0;transition:transform .25s,box-shadow .25s}
-.client-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.55)}
-.client-card img{width:100%;height:100%;object-fit:cover;display:block}
-.client-card.white-bg{background:#fff}
-.client-card.white-bg img{object-fit:contain;padding:20px;box-sizing:border-box}
-.client-name{font-size:14px;color:rgba(255,255,255,0.8);text-align:left;font-weight:500;font-family:'DM Sans',sans-serif;width:200px}
+/* SEÇÃO CLIENTES — CARROSSEL MARQUEE */
+.clientes-sec{background:#000;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:56px 0;overflow:hidden}
+.clientes-count{text-align:center;font-family:'Archivo',sans-serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;color:var(--white);letter-spacing:-1.8px;line-height:1.08;margin-bottom:48px;padding:0 40px}
+.clientes-track-wrap{overflow:hidden}
+.clientes-track{display:flex;width:max-content;animation:marquee-logos 32s linear infinite}
+.clientes-track:hover{animation-play-state:paused}
+@keyframes marquee-logos{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.client-logo{display:flex;align-items:center;justify-content:center;padding:0 72px;height:180px;flex-shrink:0}
+.client-logo img{height:140px;width:auto;max-width:420px;display:block;object-fit:contain;filter:invert(1) brightness(2.5);opacity:1;transition:filter .3s}
+.client-logo img:hover{filter:invert(1) brightness(3.5)}
 </style>
 </head>
 <body>
@@ -199,24 +196,41 @@
 
 <!-- SEÇÃO 02: QUEM CONFIA NA DIZEVOLV -->
 <section class="clientes-sec">
-  <p class="clientes-count"><strong>+40 empresas</strong>. As que já escolheram a IA que executa.</p>
-  <div class="clientes-row">
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/1.jpg" alt="Cliente"></div><span class="client-name">Cliente</span></div>
-    <div class="client-item"><div class="client-card" style="background:#e8650a"><img src="clientes/2.png" alt="Grupo 2S"></div><span class="client-name">Grupo 2S</span></div>
-    <div class="client-item"><div class="client-card" style="background:#2d4a1e"><img src="clientes/3.png" alt="Cliente"></div><span class="client-name">Cliente</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/4.jpg" alt="Conecta Obras"></div><span class="client-name">Conecta Obras</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/5.jpg" alt="Finder Pro"></div><span class="client-name">Finder Pro</span></div>
-    <div class="client-item"><div class="client-card" style="background:#0d0d0d"><img src="clientes/6.png" alt="SVis"></div><span class="client-name">SVis</span></div>
-    <div class="client-item"><div class="client-card" style="background:#5c3d8f"><img src="clientes/7.png" alt="Movioca"></div><span class="client-name">Movioca</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/8.avif" alt="Superus Engenharia"></div><span class="client-name">Superus Engenharia</span></div>
-    <div class="client-item"><div class="client-card" style="background:#1a3d25"><img src="clientes/9.png" alt="Natur &amp; Vida"></div><span class="client-name">Natur &amp; Vida</span></div>
-    <div class="client-item"><div class="client-card" style="background:#0d0d0d"><img src="clientes/10.png" alt="Máquina de Vendas"></div><span class="client-name">Máquina de Vendas</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/11.jpg" alt="Rios Vistorias"></div><span class="client-name">Rios Vistorias</span></div>
-    <div class="client-item"><div class="client-card" style="background:#1a5fbd"><img src="clientes/12.png" alt="Grupo Clasp"></div><span class="client-name">Grupo Clasp</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/13.png" alt="ARTTI Capital"></div><span class="client-name">ARTTI Capital</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/14.jpg" alt="ProAtiva"></div><span class="client-name">ProAtiva</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/15.png" alt="Cliente"></div><span class="client-name">Cliente</span></div>
-    <div class="client-item"><div class="client-card white-bg"><img src="clientes/16.jpg" alt="Cliente"></div><span class="client-name">Cliente</span></div>
+  <p class="clientes-count">Algumas empresas que escolheram a <span class="g">Dizevolv</span></p>
+  <div class="clientes-track-wrap">
+    <div class="clientes-track">
+      <div class="client-logo"><img src="clientes/1.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/2.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/3.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/4.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/5.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/6.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/7.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/8.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/11.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/12.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/13.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/14.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/15.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/16.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/17.png" alt="Cliente"></div>
+      <!-- duplicata para loop contínuo -->
+      <div class="client-logo"><img src="clientes/1.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/2.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/3.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/4.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/5.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/6.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/7.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/8.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/11.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/12.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/13.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/14.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/15.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/16.png" alt="Cliente"></div>
+      <div class="client-logo"><img src="clientes/17.png" alt="Cliente"></div>
+    </div>
   </div>
 </section>
 
@@ -563,82 +577,103 @@
 <section class="agentes">
   <div class="agentes-intro">
     <p class="s-label">O que os agentes fazem na prática</p>
-    <h2>Da IA que responde<br>para a <span class="g">IA que executa.</span></h2>
+    <h2>Da IA que responde para a <span class="g">IA que executa.</span></h2>
     <p>Um agente autônomo não conversa com o software. Ele opera o software, da mesma forma que um humano faria, mas sem parar, sem errar por cansaço, sem precisar de férias.</p>
   </div>
-  <div class="agent-grid">
-    <div class="agent-card">
-      <div class="agent-area">Financeiro</div>
-      <div class="agent-title">Agente que cuida do seu caixa</div>
-      <ul class="agent-list">
-        <li>Abre o financeiro todo dia e identifica inadimplência</li>
-        <li>Cruza com o CRM e categoriza por risco</li>
-        <li>Dispara régua de cobrança automaticamente</li>
-        <li>Gera relatório executivo toda semana</li>
-      </ul>
+  <div class="agent-tabs-wrap">
+    <!-- COL 1: Tabs pill -->
+    <div class="agent-tabs">
+      <button class="agent-tab active" data-panel="#ap-financeiro" data-icon="💰"><span class="tab-icon">💰</span> Financeiro</button>
+      <button class="agent-tab" data-panel="#ap-operacao" data-icon="⚙️"><span class="tab-icon">⚙️</span> Operação</button>
+      <button class="agent-tab" data-panel="#ap-comercial" data-icon="📈"><span class="tab-icon">📈</span> Comercial</button>
+      <button class="agent-tab" data-panel="#ap-juridico" data-icon="⚖️"><span class="tab-icon">⚖️</span> Jurídico</button>
+      <button class="agent-tab" data-panel="#ap-produto" data-icon="💻"><span class="tab-icon">💻</span> Produto Digital</button>
+      <button class="agent-tab" data-panel="#ap-qualquer" data-icon="🤖"><span class="tab-icon">🤖</span> Qualquer Processo</button>
     </div>
-    <div class="agent-card">
-      <div class="agent-area">Operação</div>
-      <div class="agent-title">Agente que cuida dos seus processos</div>
-      <ul class="agent-list">
-        <li>Pega o pedido, verifica estoque, emite nota fiscal</li>
-        <li>Agenda entrega e notifica o cliente</li>
-        <li>Tudo sem nenhum humano no processo</li>
-        <li>Integra sistemas que nunca foram feitos para se conversar</li>
-      </ul>
+    <!-- COL 2: Visual orbital -->
+    <div class="agent-visual">
+      <div class="orbital-ring r1"></div>
+      <div class="orbital-ring r2"></div>
+      <div class="orbital-ring r3"></div>
+      <div class="agent-icon-wrap">
+        <span class="agent-icon">💰</span>
+      </div>
     </div>
-    <div class="agent-card">
-      <div class="agent-area">Comercial</div>
-      <div class="agent-title">Agente que cuida das suas vendas</div>
-      <ul class="agent-list">
-        <li>Monitora CRM e identifica oportunidades paradas</li>
-        <li>Dispara follow-up no momento certo</li>
-        <li>Atualiza dados sem depender do vendedor lembrar</li>
-        <li>Gera relatório de pipeline em tempo real</li>
-      </ul>
-    </div>
-    <div class="agent-card">
-      <div class="agent-area">Jurídico</div>
-      <div class="agent-title">Agente que lê contratos por você</div>
-      <ul class="agent-list">
-        <li>Lê contratos e extrai cláusulas relevantes</li>
-        <li>Compara com histórico e gera alerta</li>
-        <li>Monitora prazos e obrigações automaticamente</li>
-        <li>Elimina revisão manual de documentos</li>
-      </ul>
-    </div>
-    <div class="agent-card">
-      <div class="agent-area">Produto Digital</div>
-      <div class="agent-title">Transforma processo interno em receita</div>
-      <ul class="agent-list">
-        <li>Resolve a dor interna e ainda vende para concorrentes</li>
-        <li>Micro-SaaS construído em cima do que você já sabe</li>
-        <li>Nova fonte de receita recorrente sem custo marginal</li>
-        <li>Sistema próprio como vantagem competitiva</li>
-      </ul>
-    </div>
-    <div class="agent-card" style="border:1px solid rgba(255,107,43,0.2);background:rgba(62,207,142,0.04);">
-      <div class="agent-area">Qualquer processo</div>
-      <div class="agent-title">Se existe trabalho manual repetitivo, existe um agente para ele.</div>
-      <ul class="agent-list">
-        <li>RH, logística, administrativo, atendimento</li>
-        <li>Integrações entre sistemas incompatíveis</li>
-        <li>Automações de back-office que liberam sua equipe</li>
-        <li>Qualquer processo que hoje depende de um humano específico</li>
-      </ul>
+    <!-- COL 3: Painéis de texto -->
+    <div class="agent-panels">
+      <div class="agent-panel active" id="ap-financeiro">
+        <span class="agent-badge">Financeiro</span>
+        <div class="agent-panel-title">Agente que cuida do seu caixa</div>
+        <ul class="agent-list">
+          <li>Abre o financeiro todo dia e identifica inadimplência</li>
+          <li>Cruza com o CRM e categoriza por risco</li>
+          <li>Dispara régua de cobrança automaticamente</li>
+          <li>Gera relatório executivo toda semana</li>
+        </ul>
+      </div>
+      <div class="agent-panel" id="ap-operacao">
+        <span class="agent-badge">Operação</span>
+        <div class="agent-panel-title">Agente que cuida dos seus processos</div>
+        <ul class="agent-list">
+          <li>Pega o pedido, verifica estoque, emite nota fiscal</li>
+          <li>Agenda entrega e notifica o cliente</li>
+          <li>Tudo sem nenhum humano no processo</li>
+          <li>Integra sistemas que nunca foram feitos para se conversar</li>
+        </ul>
+      </div>
+      <div class="agent-panel" id="ap-comercial">
+        <span class="agent-badge">Comercial</span>
+        <div class="agent-panel-title">Agente que cuida das suas vendas</div>
+        <ul class="agent-list">
+          <li>Monitora CRM e identifica oportunidades paradas</li>
+          <li>Dispara follow-up no momento certo</li>
+          <li>Atualiza dados sem depender do vendedor lembrar</li>
+          <li>Gera relatório de pipeline em tempo real</li>
+        </ul>
+      </div>
+      <div class="agent-panel" id="ap-juridico">
+        <span class="agent-badge">Jurídico</span>
+        <div class="agent-panel-title">Agente que lê contratos por você</div>
+        <ul class="agent-list">
+          <li>Lê contratos e extrai cláusulas relevantes</li>
+          <li>Compara com histórico e gera alerta</li>
+          <li>Monitora prazos e obrigações automaticamente</li>
+          <li>Elimina revisão manual de documentos</li>
+        </ul>
+      </div>
+      <div class="agent-panel" id="ap-produto">
+        <span class="agent-badge">Produto Digital</span>
+        <div class="agent-panel-title">Transforma processo interno em receita</div>
+        <ul class="agent-list">
+          <li>Resolve a dor interna e ainda vende para concorrentes</li>
+          <li>Micro-SaaS construído em cima do que você já sabe</li>
+          <li>Nova fonte de receita recorrente sem custo marginal</li>
+          <li>Sistema próprio como vantagem competitiva</li>
+        </ul>
+      </div>
+      <div class="agent-panel" id="ap-qualquer">
+        <span class="agent-badge">Qualquer Processo</span>
+        <div class="agent-panel-title">Se existe trabalho manual repetitivo, existe um agente para ele.</div>
+        <ul class="agent-list">
+          <li>RH, logística, administrativo, atendimento</li>
+          <li>Integrações entre sistemas incompatíveis</li>
+          <li>Automações de back-office que liberam sua equipe</li>
+          <li>Qualquer processo que hoje depende de um humano específico</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="agent-vs">
-    <div class="vs-col">
-      <div class="vs-label bad">Automação tradicional</div>
+    <div class="vs-col vs-col-bad">
+      <div class="vs-label bad">Como os outros fazem</div>
       <div class="vs-item bad">Executa sequência rígida pré-definida</div>
       <div class="vs-item bad">Quebra quando algo muda</div>
       <div class="vs-item bad">Não toma decisões</div>
       <div class="vs-item bad">É um semáforo</div>
     </div>
-    <div class="vs-sep">VS</div>
-    <div class="vs-col">
-      <div class="vs-label good">Agente autônomo de IA</div>
+    <div class="vs-sep"><span>VS</span></div>
+    <div class="vs-col vs-col-good">
+      <div class="vs-label good">Como a Dizevolv faz</div>
       <div class="vs-item good">Observa, decide e adapta a ação</div>
       <div class="vs-item good">Funciona com variáveis e exceções</div>
       <div class="vs-item good">Age como um colaborador experiente</div>
