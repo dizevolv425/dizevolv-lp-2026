@@ -378,6 +378,7 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
 .cta-inner-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
 .bento-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:2px}
+.solucao-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 
 /* BENTO GRID PLACEMENTS — desktop only */
 .bento-c1{grid-column:1;grid-row:1/3;min-width:0}
@@ -409,6 +410,8 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
   .hero{padding:96px 6% 56px}
   .dif-grid{grid-template-columns:1fr !important;gap:16px !important}
   .vis-grid{grid-template-columns:1fr;gap:40px}
+  .solucao-grid{grid-template-columns:1fr;gap:24px}
+  .solucao-card{padding:32px 24px !important}
   .dif-grid{grid-template-columns:1fr;gap:16px}
   .comp-grid{grid-template-columns:1fr;gap:16px}
   .cta-inner-grid{grid-template-columns:1fr;gap:32px}
