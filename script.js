@@ -113,3 +113,19 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
+// Hamburger menu
+const hamburger = document.querySelector('.nav-hamburger');
+const navMenu = document.querySelector('.nav-menu');
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+}
+function closeMenu() {
+  if (hamburger) hamburger.classList.remove('open');
+  if (navMenu) navMenu.classList.remove('open');
+  if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+}
+
