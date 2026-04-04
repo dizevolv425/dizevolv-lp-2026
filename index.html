@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dizevolv Tech Parceiro de Operação com IA</title>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=18">
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Archivo:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=19">
 
 </head>
 <body>
@@ -16,25 +16,40 @@
   <a href="#cta" class="nav-cta">Agendar call</a>
 </nav>
 
+<!-- SKIP LINK (accessibility) -->
+<a href="#hero-content" class="skip-link">Ir para o conteúdo principal</a>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Hero principal">
 
-  <!-- ORB -->
-  <div class="hero-orb" aria-hidden="true"></div>
+  <!-- ORB (decorative) -->
+  <div class="hero-orb" aria-hidden="true">
+    <div class="hero-orb-ring r1"></div>
+    <div class="hero-orb-ring r2"></div>
+  </div>
 
-  <!-- FLOATING PILLS -->
-  <div class="hero-pill hp-1"><span class="hp-dot"></span>Financeiro</div>
-  <div class="hero-pill hp-2"><span class="hp-dot"></span>Jurídico</div>
-  <div class="hero-pill hp-3"><span class="hp-dot"></span>Comercial</div>
-  <div class="hero-pill hp-4"><span class="hp-dot"></span>Logística</div>
+  <!-- FLOATING PILLS (decorative, aria-hidden) -->
+  <div class="hero-pill hp-1" aria-hidden="true"><span class="hp-dot"></span>Financeiro</div>
+  <div class="hero-pill hp-2" aria-hidden="true"><span class="hp-dot"></span>Jurídico</div>
+  <div class="hero-pill hp-3" aria-hidden="true"><span class="hp-dot"></span>Comercial</div>
+  <div class="hero-pill hp-4" aria-hidden="true"><span class="hp-dot"></span>Logística</div>
 
   <!-- CONTENT -->
-  <div class="hero-content">
-    <h1>Pare de contratar pessoas<br>para fazer o que a <span class="g">IA pode fazer sozinha.</span></h1>
+  <div class="hero-content" id="hero-content">
+    <p class="hero-eyebrow">Automação inteligente para empresas que querem crescer</p>
+    <h1>Pare de contratar pessoas<br>para fazer o que a<br><span class="g">IA pode fazer sozinha.</span></h1>
     <p class="hero-sub">Financeiro, jurídico, comercial, logística.<br>Todos os seus processos inteiros podem rodar sem intervenção humana.</p>
     <div class="btns">
-      <a href="#cta" class="btn-p btn-pill-cta" style="white-space:nowrap;">Quero automatizar com a Dizevolv</a>
+      <a href="#cta" class="btn-p btn-pill-cta" aria-label="Agendar call gratuita para automatizar com a Dizevolv">Quero automatizar com a Dizevolv</a>
     </div>
+    <p class="hero-trust">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      Sem compromisso &nbsp;&middot;&nbsp;
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      Call de 30 min &nbsp;&middot;&nbsp;
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      Resultado em semanas
+    </p>
   </div>
 
 </section>
