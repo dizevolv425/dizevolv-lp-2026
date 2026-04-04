@@ -377,6 +377,7 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
 .comp-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:24px}
 .cta-inner-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.bento-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:2px}
 
 /* BENTO GRID PLACEMENTS — desktop only */
 .bento-c1{grid-column:1;grid-row:1/3}
