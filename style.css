@@ -384,15 +384,14 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
   .cert-grid{grid-template-columns:repeat(3,1fr)}
   .dores-grid{grid-template-columns:1fr}
   .evo-grid{grid-template-columns:1fr !important}
-  .bento-grid{grid-template-columns:1fr 1fr !important}
-}
-@media(max-width:768px){
-  .dif-grid{grid-template-columns:1fr !important;gap:16px !important}
+  .bento-grid{grid-template-columns:1fr 1fr !important;grid-template-rows:auto !important}
+  .bento-grid > div{grid-column:auto !important;grid-row:auto !important}
 }
 @media(max-width:768px){
   .hero-pill{display:none}
   h1{font-size:clamp(30px,8vw,48px);letter-spacing:-1.8px}
   .hero{padding:96px 6% 56px}
+  .dif-grid{grid-template-columns:1fr !important;gap:16px !important}
 }
 @media(max-width:600px){
   .prob-cards,.agent-grid,.feat-grid,.dados-grid{grid-template-columns:1fr}
@@ -411,7 +410,7 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
   .clientes-count{font-size:clamp(20px,6vw,28px);padding:0 20px;letter-spacing:-0.8px}
   .gar-box::before{width:min(360px,100%)}
   .cta-f::before{width:100vw;height:220px}
-  .bento-grid{grid-template-columns:1fr !important}
+  .bento-grid{grid-template-columns:1fr !important;grid-template-rows:auto !important}
 }
 @media(max-width:480px){
   h1{font-size:clamp(26px,8.5vw,36px);letter-spacing:-1.2px}
