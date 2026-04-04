@@ -399,6 +399,11 @@ footer{padding:36px 6%;border-top:1px solid var(--border);display:flex;align-ite
   h1{font-size:clamp(30px,8vw,48px);letter-spacing:-1.8px}
   .hero{padding:96px 6% 56px}
   .dif-grid{grid-template-columns:1fr !important;gap:16px !important}
+  .vis-grid{grid-template-columns:1fr !important;gap:40px !important}
+  .comp-grid{grid-template-columns:1fr !important;gap:16px !important}
+  .cta-inner-grid{grid-template-columns:1fr !important;gap:32px !important}
+  .principles-grid{grid-template-columns:1fr !important}
+  .backlog-mockup{overflow-x:auto;font-size:11px}
 }
 @media(max-width:600px){
   .prob-cards,.agent-grid,.feat-grid,.dados-grid{grid-template-columns:1fr}
